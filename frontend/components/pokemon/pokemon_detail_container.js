@@ -2,9 +2,11 @@ import {connect} from 'react-redux';
 import PokemonDetail from './pokemon_detail';
 
 
-const mapStateToProps = ({pokemonDetail})=> ({
-  pokemonDetail
-});
+const mapStateToProps = ({pokemonDetail}, ownProps)=> {
+  return ({
+    pokemonDetail
+  });
+};
 
 export default connect(
   mapStateToProps

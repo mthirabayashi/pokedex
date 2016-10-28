@@ -4,6 +4,7 @@ export const selectAllPokemon = ({pokemon}) => (
   values(pokemon)
 );
 
-export const selectPokemonItem = (state, itemId) => (
-  
-);
+export const selectPokemonItem = ({pokemonDetail}, itemId) => {
+  const foundItem = pokemonDetail.items.find(item => item.id === itemId)
+  return foundItem || {};
+}
